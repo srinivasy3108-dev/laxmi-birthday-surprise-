@@ -308,5 +308,114 @@ function renderQuiz(){
  const q=quiz[quizIndex];$('quizCount').textContent=`Question ${quizIndex+1} of ${quiz.length}`;$('quizProgress').style.width=(quizIndex/quiz.length*100)+'%';$('quizQuestion').textContent=q.q;
  $('quizAnswers').innerHTML=q.a.map((a,i)=>`<button class="secondary" onclick="answerQuiz(${i})">${a}</button>`).join('');
 }
-function answerQuiz(i){if(i===quiz[quizIndex].cor
+function answerQuiz(i){if(i===quiz[quizIndex].correct
+
+rect){
+  quizScore++;
+}
+quizIndex++;
+renderQuiz();
+}
+
+function showQuizResult(){
+  $('quizAnswers').innerHTML =
+    '<p>You scored '+quizScore+' out of '+quiz.length+' 💖</p>'+
+    '<button onclick="go(\'envelope\')">Open Your Gifts 💌</button>';
+}
+
+function burstGifts(){
+  go('mystery');
+  flowers(35);
+}
+
+function tapMiniGift(i){
+  if(i===0){
+    showModal('A tiny surprise 🎁','Sorry, I am not the first one. Go to another gift!');
+  }else if(i===1){
+    showModal('One more surprise 🎁','Sorry, I chose the wrong one. Try another gift!');
+  }else if(i===2){
+    go('letterEnd');
+  }else{
+    showModal('A little surprise 🎁','Keep exploring, Laxmi! 💕');
+  }
+}
+
+function backToGifts(){
+  stopGames();
+  go('mystery');
+}
+
+function stopGames(){
+  if(gameInterval) clearInterval(gameInterval);
+  gameInterval=null;
+}
+
+function startHeartGame(){
+  stopGames();
+  go('heartGame');
+  showModal('Catch the Falling Hearts 💗','Tap the falling hearts to collect them!');
+}
+
+function startBombGame(){
+  stopGames();
+  go('bombGame');
+  showModal('Dodge the Bombs 💣','Avoid the bombs and save the hearts!');
+}
+
+function endHeartGame(){
+  stopGames();
+  showModal(
+    'Game Over 💔',
+    'Every little heart matters! Want to try again?'
+  );
+}
+
+function endBombGame(){
+  stopGames();
+  showModal(
+    'Game Over 💔',
+    'Try once more to save the hearts!'
+  );
+}
+
+function movePlayer(){
+  const player=$('player');
+  if(player){
+    player.style.left='50%';
+  }
+}
+
+function flowers(count=20){
+  const symbols=['🌸','🌷','✨','💖','🌼'];
+  for(let i=0;i<count;i++){
+    const el=document.createElement('span');
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.cssText=
+      'position:fixed;left:'+Math.random()*100+'%;top:-30px;'+
+      'font-size:20px;pointer-events:none;z-index:9999;'+
+      'transition:transform 3s linear,top 3s linear;';
+    document.body.appendChild(el);
+    setTimeout(()=>{
+      el.style.top='105vh';
+      el.style.transform='rotate(360deg)';
+    },50);
+    setTimeout(()=>el.remove(),3200);
+  }
+}
+
+function startConfetti(){
+  flowers(45);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('[onclick]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      // Keep existing button actions intact.
+    });
+  });
+});
+</script>
+</body>
+</html>
+
                           
