@@ -3,419 +3,159 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Laxmi 💙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Laxmi 💖</title>
 <style>
-:root{--navy:#07152f;--blue:#10294c;--pink:#ffb6d5;--gold:#ffe1a6;--cream:#fff3df}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle at top,#18355b,var(--navy) 70%);color:#fff3f8;font-family:Georgia,'Times New Roman',serif;text-align:center;min-height:100vh}
-button{font:inherit;cursor:pointer;border:1px solid #ffe1a677;border-radius:24px;padding:13px 20px;background:linear-gradient(135deg,#ffe1a6,#ffb6d5);color:#18203c;font-weight:bold;box-shadow:0 5px 18px #0004;transition:.2s}
-button:hover{transform:translateY(-2px) scale(1.02)}
-button:active{transform:scale(.97)}
-button.secondary{background:#142d50;color:#fff0f6;border-color:#ffb6d5}
-button:disabled{opacity:.5;cursor:not-allowed}
-.screen{display:none;min-height:100vh;padding:28px 16px 48px;align-items:center;justify-content:center;flex-direction:column;gap:18px;animation:appear .55s ease}
-.screen.active{display:flex}
-h1{font-size:clamp(2rem,7vw,3.5rem);color:var(--pink);text-shadow:0 0 20px #ffb6d566;margin:8px}
-h2{color:var(--gold);font-size:clamp(1.4rem,5vw,2.2rem)}
-p{line-height:1.7;max-width:650px;margin:4px auto}
-.small{opacity:.82;font-size:.95rem}
-.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
-.panel{width:min(680px,100%);padding:25px 18px;border:1px solid #ffdaaa66;border-radius:25px;background:#0b1b36eF;box-shadow:0 12px 38px #0004}
-.bigemoji{font-size:clamp(4rem,18vw,7rem);filter:drop-shadow(0 0 15px #ffb6d577);animation:float 2.5s ease-in-out infinite}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:min(650px,100%)}
-.card{border:1px solid #ffb6d577;border-radius:18px;background:linear-gradient(145deg,#142e51,#0a1932);padding:18px 10px;min-height:112px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}
-.card .emoji{font-size:2.3rem}
-.card button{padding:10px 14px}
-.card.done{opacity:.7;border-color:#ffe1a6}
-.envelope{font-size:5rem;cursor:pointer;animation:float 2.3s infinite}
-.letter{background:repeating-linear-gradient(0deg,#fff2d8,#fff2d8 28px,#ead8b5 29px);color:#49351f;border:8px double #b28c56;border-radius:7px;padding:25px 20px;width:min(650px,100%);text-align:left;line-height:1.9;box-shadow:0 10px 30px #0007}
-.letter h2{text-align:center;color:#79552f}
-.progress{width:min(500px,90%);height:8px;background:#ffffff25;border-radius:99px;overflow:hidden}
-.progress span{display:block;height:100%;width:0;background:var(--pink);transition:width .3s}
-#fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
-.fall{position:absolute;top:-35px;animation:fall linear forwards;opacity:.9}
-.modal{position:fixed;inset:0;background:#0004;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
-.modal.show{display:flex}
-.modalbox{width:min(420px,100%);background:#0b1b36;border:1px solid #ffb6d5;border-radius:23px;padding:26px 18px;box-shadow:0 12px 50px #0008;animation:appear .25s}
-.gamewrap{width:min(540px,100%)}
-.gamearea{position:relative;overflow:hidden;width:100%;height:min(58vh,430px);min-height:300px;background:linear-gradient(#102b50,#07152f);border:2px solid #ffb6d5;border-radius:22px;touch-action:manipulation}
-.gamehud{display:flex;justify-content:space-between;gap:12px;margin:0 4px 10px;color:var(--gold)}
-.falling{position:absolute;top:-45px;font-size:34px;cursor:pointer;user-select:none;filter:drop-shadow(0 0 7px #ffb6d588)}
-.player{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-size:45px;user-select:none}
-.gamehint{font-size:.88rem;opacity:.8}
-.gameover{position:absolute;inset:0;background:rgba(0,0,0,.25);z-index:5;display:none;align-items:center;justify-content:center;padding:15px}
-.gameover.show{display:flex}
-.gameoverbox{width:100%;padding:22px 12px;background:#07152fdf;border:1px solid #ffb6d5;border-radius:20px;box-shadow:0 8px 25px #0005}
-#quizQuestion{font-size:1.25rem;line-height:1.6}
-.quizanswers{display:grid;gap:10px;margin-top:18px}
-.quizanswers button{width:100%}
-@keyframes appear{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
-@keyframes fall{to{transform:translateY(110vh) rotate(480deg);opacity:.15}}
-@keyframes pop{0%{transform:scale(.3);opacity:0}75%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
-.pop{animation:pop .35s ease}
-@media(max-width:400px){.cards{gap:8px}.card{padding:14px 6px}.screen{padding:22px 12px 35px}}
+body{margin:0;background:#07142e;color:#fff;font-family:Arial,sans-serif;text-align:center}
+main{max-width:560px;margin:auto;padding:22px 16px}
+.page{display:none;min-height:90vh;align-content:center;animation:appear .45s ease}
+.page.active{display:block}
+h1{color:#ffc4df;font-size:clamp(27px,7vw,38px)}
+p{line-height:1.8;color:#e8eaf8}
+button{border:0;border-radius:25px;padding:13px 18px;margin:7px;background:#ffc4df;color:#32152e;font-size:15px;font-weight:bold;cursor:pointer}
+button:active{transform:scale(.96)}
+input{width:90%;padding:13px;border-radius:12px;border:1px solid #6677a0;background:#122449;color:white}
+.big{font-size:95px;margin:20px;cursor:pointer}
+.panel{background:#122449;border:1px solid #34476f;border-radius:20px;padding:20px;margin:14px 0}
+.small{font-size:13px;color:#bfc9e7}
+#sparkles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.particle{position:absolute;top:-30px;animation:fall 3.5s linear forwards}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.2}}
 </style>
 </head>
 <body>
-<div id="fx"></div>
-
-<section id="welcome" class="screen active">
-  <div class="bigemoji">🎂</div>
-  <p class="small">A little world made just for you</p>
-  <h1>Happy Birthday, Laxmi! 💙</h1>
-  <div class="panel">
-    <p>Hey Laxmi! 🥹💕</p>
-    <p>Today is all about your smile, your happiness, and all the little things that make you special. I made you a tiny birthday adventure. So relax, tap around, and enjoy every surprise!</p>
-    <p>With lots of wishes and a little bit of madness,</p>
-    <p><b>— Srinu ♡</b></p>
-  </div>
-  <button onclick="startSurprise()">Start the Surprise ✨</button>
-  <p class="small">🔊 Tap to start the birthday melody</p>
+<div id="sparkles"></div>
+<main>
+<section id="welcome" class="page active">
+<div class="big">🎂</div>
+<h1>Happy Birthday, Laxmi! 💖</h1>
+<p>A tiny world of surprises, made especially for you.</p>
+<p>Today deserves extra smiles, sweet memories and lots of happiness. 🌸</p>
+<button onclick="go('wish')">Start the Surprise ✨</button>
+<button onclick="music()">Play Birthday Tune 🎵</button>
+<p class="small">Tap the music button to start or stop the tune.</p>
 </section>
 
-<section id="wish" class="screen">
-  <div class="bigemoji">🌠</div>
-  <h1>Make a Wish</h1>
-  <div class="panel">
-    <p>Close your eyes for a moment, think of something that would make your heart happy, and make your secret birthday wish. 💫</p>
-    <p>Ready? Your wish is between you and the stars.</p>
-  </div>
-  <button onclick="go('cake')">My Wish Is Ready ✨</button>
+<section id="wish" class="page">
+<div class="big">🌟</div>
+<h1>Make a Wish</h1>
+<p>Take a little moment, close your eyes, and make a wish just for yourself. 💗</p>
+<input id="wishText" placeholder="Write your secret wish (optional)">
+<br><button onclick="go('cake')">My Wish Is Made ✨</button>
+<button onclick="go('welcome')">← Back</button>
 </section>
 
-<section id="cake" class="screen">
-  <h1>A Cake Just for You 🎂</h1>
-  <p>First, tap the cake to blow out the candles. Then tap again to cut it!</p>
-  <div id="cakeEmoji" class="bigemoji" onclick="cakeTap()" style="cursor:pointer">🎂</div>
-  <h2 id="cakeText">Make a wish… then blow! 💨</h2>
-  <button id="cakeBtn" onclick="cakeTap()">Blow the Candles 💨</button>
-  <div class="actions"><button class="secondary" onclick="go('choice')">Skip to Surprise</button></div>
+<section id="cake" class="page">
+<h1>A Cake Just for You 🎂</h1>
+<p id="cakeMessage">Tap the cake to blow out your candles!</p>
+<div class="big" id="cakeEmoji" onclick="blow()">🕯️🎂🕯️</div>
+<button onclick="blow()">Blow the Candles 🌬️</button>
+<button id="cutButton" hidden onclick="cutCake()">Cut the Cake 🍰</button>
+<button onclick="go('wish')">← Back</button>
 </section>
 
-<section id="choice" class="screen">
-  <h1>Hey Laxmi! 💌</h1>
-  <h2>What would you choose?</h2>
-  <p>Choose your adventure. There's no wrong answer! 🥹</p>
-  <div class="cards">
-    <div class="card"><span class="emoji">🕵️‍♀️</span><b>Crazy Quiz</b><p class="small">How well do you know us?</p><button onclick="startQuiz()">Let's Play!</button></div>
-    <div class="card"><span class="emoji">🎁</span><b>Open Gifts</b><p class="small">A little surprise awaits</p><button onclick="go('envelope')">Open Gifts</button></div>
-  </div>
-</section>
-
-<section id="quiz" class="screen">
-  <h1>Our Crazy Quiz 💗</h1>
-  <div class="panel">
-    <div class="progress"><span id="quizProgress"></span></div>
-    <p id="quizCount" class="small">Question 1 of 5</p>
-    <p id="quizQuestion"></p>
-    <div id="quizAnswers" class="quizanswers"></div>
-  </div>
-  <button class="secondary" onclick="go('choice')">Back to Choices</button>
-</section>
-
-<section id="quizResult" class="screen">
-  <div class="bigemoji">🏆</div><h1>Quiz Complete!</h1>
-  <div class="panel"><p id="quizResultText">You made it!</p><p>Whether you got every answer right or not, the memories are still ours. 💙</p></div>
-  <button onclick="go('envelope')">Now, Open Your Gifts 🎁</button>
-</section>
-
-<section id="envelope" class="screen">
-  <h1>A Gift Within a Gift 💌</h1>
-  <p>First open the big present, then tap the envelope to reveal four little cards.</p>
-  <div id="outerGift" class="bigemoji" onclick="openEnvelope()" style="cursor:pointer">🎁</div>
-  <button id="outerGiftBtn" onclick="openEnvelope()">Open the Big Gift</button>
-  <div id="envelopeContents" style="display:none;width:min(650px,100%)">
-    <div class="envelope" onclick="revealCards()">✉️</div>
-    <p>Tap the envelope to reveal your four cards!</p>
-    <div id="fourCards" class="cards" style="display:none"></div>
-    <p id="cardProgress" class="small"></p>
-    <button id="continueMsgs" style="display:none" onclick="go('message1')">Continue to Your Messages 💗</button>
-  </div>
-</section>
-
-<section id="message1" class="screen">
-  <div class="bigemoji">🌷</div><h1>One Little Memory</h1>
-  <div class="letter">
-    <p>That day when we were drawing and ended up having such a long conversation? I still remember it.</p>
-    <p>I wish there could be more days like that, because somehow, even an ordinary day feels special when I get to share a little part of it with you.</p>
-    <p>I don't expect you to do anything special. I just wanted you to know that the little moments we share genuinely mean something to me. 🥹💕</p>
-    <p style="text-align:right">— Srinu ♡</p>
-  </div>
-  <button onclick="go('message2')">One More Message 💌</button>
-</section>
-
-<section id="message2" class="screen">
-  <div class="bigemoji">🕯️</div><h1>One Little Wish</h1>
-  <div class="letter">
-    <p>Dear Laxmi,</p>
-    <p>On your birthday, I hope life gives you a thousand little reasons to smile. I hope the days ahead bring you peace when things feel heavy, laughter when you need it most, and people who appreciate the person you are.</p>
-    <p>Thank you for the little conversations, the random moments, and the memories that might seem ordinary to everyone else but mean something to me.</p>
-    <p>Keep being yourself, keep chasing the things that make you happy, and never forget that you deserve lovely things in life. This little website is just my way of making your day a bit more memorable. 💗</p>
-    <p style="text-align:right">With lots of wishes,<br>— Srinu ♡</p>
-  </div>
-  <button onclick="go('mystery')">Wait… There's More 🎁</button>
-</section>
-
-<section id="mystery" class="screen">
-  <h1>The Gift Mystery 🎁</h1>
-  <p>Tap the giant gift and see what happens!</p>
-  <div id="giantGift" class="bigemoji" onclick="burstGifts()" style="cursor:pointer">🎁</div>
-  <button id="burstBtn" onclick="burstGifts()">Open the Giant Gift ✨</button>
-  <div id="miniGifts" class="cards" style="display:none"></div>
-  <p id="mysteryHint" class="small"></p>
-  <button id="firstGameButton" style="display:none" onclick="go('heartGame')">Start the First Game 💗</button>
-</section>
-
-<section id="heartGame" class="screen">
-  <h1>Catch the Falling Hearts 💗</h1>
-  <p>Catch the hearts before they reach the bottom! Miss even one and… game over 😭</p>
-  <div class="gamewrap">
-    <div class="gamehud"><b>Score: <span id="heartScore">0</span></b><b>Missed: <span id="heartMiss">0</span>/1</b></div>
-    <div id="heartArea" class="gamearea">
-      <div id="heartPlayer" class="player">🧺</div>
-      <div id="heartOver" class="gameover">
-        <div class="gameoverbox"><h2>haha sorry ur game is over 😭💗</h2><p>Your score: <b id="heartFinal">0</b></p><div class="actions"><button onclick="startHeartGame()">Try Again 💗</button><button class="secondary" onclick="backToGifts()">Return to Gifts 🎁</button></div></div>
-      </div>
-    </div>
-  </div>
-  <p class="gamehint">Move the basket with your finger or mouse. On a phone, drag inside the game.</p>
-  <button class="secondary" onclick="backToGifts()">Back to Gifts</button>
-</section>
-
-<section id="bombGame" class="screen">
-  <h1>Dodge the Bombs 💣</h1>
-  <p>Move your heart to collect 💗 and avoid 💣. Touch a bomb or miss a heart and the game ends!</p>
-  <div class="gamewrap">
-    <div class="gamehud"><b>Score: <span id="bombScore">0</span></b><b>Lives: <span id="bombLives">1</span></b></div>
-    <div id="bombArea" class="gamearea">
-      <div id="bombPlayer" class="player">💗</div>
-      <div id="bombOver" class="gameover">
-        <div class="gameoverbox"><h2>haha sorry ur game is over 😭💗</h2><p>Your score: <b id="bombFinal">0</b></p><div class="actions"><button onclick="startBombGame()">Try Again 💗</button><button class="secondary" onclick="backToGifts()">Back to Gifts 🎁</button></div></div>
-      </div>
-    </div>
-  </div>
-  <p class="gamehint">Drag the heart left and right to dodge bombs and catch hearts.</p>
-  <button class="secondary" onclick="backToGifts()">Back to Gifts</button>
-</section>
-
-<section id="letterEnd" class="screen">
-  <p class="small">A little keepsake, made just for you</p>
-  <h1>For Laxmi, With Love ✉️</h1>
-  <div class="letter">
-    <h2>Dear Laxmi ♡</h2>
-    <p>Happy Birthday, Laxmi! 🥹💗</p>
-    <p>Some people become part of our memories without even trying. A random conversation, a little laugh, a day spent drawing — these moments may look small, but sometimes they stay with us for a long time.</p>
-    <p>That day when we were drawing and ended up having such a long conversation is one I still remember. I wish there could be more days like that, because even an ordinary day can feel special when I get to share a little part of it with you.</p>
-    <p>I don't expect anything from you. I just wanted you to know that the little moments we share genuinely mean something to me. Thank you for being a part of those memories.</p>
-    <p>For your new year of life, I wish you happiness that lasts, courage for the hard days, laughter that makes your stomach hurt, and dreams that slowly turn into reality. I hope you always find reasons to smile and people who make you feel appreciated.</p>
-    <p>This website took a few clicks, a little creativity, and a lot of thought — but the wish behind it is simple: I hope your birthday feels as lovely and memorable as you deserve.</p>
-    <p>Keep this little letter as a reminder of a birthday full of surprises, silly games, and good memories. And whenever you look back at it, I hope it makes you smile. 🥹</p>
-    <p>Happy Birthday once again, Laxmi. May your life be full of beautiful moments, kind people, and countless reasons to be happy. 🌷</p>
-    <p style="text-align:right">With lots of love and friendship,<br><b>— Srinu ♡</b></p>
-  </div>
-  <button onclick="go('finish')">Keep This Memory 💙</button>
-</section>
-
-<section id="finish" class="screen">
-  <div class="bigemoji">💙</div><h1>That's All, Laxmi!</h1>
-  <div class="panel"><p>I hope this little surprise made you smile. Keep shining, keep laughing, and have the sweetest birthday ever! 🎂✨</p><p>Made with care by Srinu ♡</p></div>
-  <div class="actions"><button onclick="go('welcome')">Start Again 🔄</button><button class="secondary" onclick="toggleMusic()">Music On / Off 🎵</button></div>
-</section>
-
-<div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
-  <div class="modalbox"><h2 id="modalTitle">A little message 💌</h2><p id="modalText"></p><div class="actions"><button onclick="closeModal()">Okay 💗</button></div></div>
+<section id="quiz" class="page">
+<h1>Our Tiny Quiz 💌</h1>
+<p id="quizCount"></p>
+<div class="panel">
+<p id="question"></p>
+<div id="answers"></div>
 </div>
+<button onclick="go('cake')">← Back to Cake</button>
+</section>
+
+<section id="finish" class="page">
+<div class="big">💖</div>
+<h1>That Was Sweet!</h1>
+<p id="resultText">No score can measure the value of little memories.</p>
+<p>Ready for the next part of your surprise?</p>
+<button onclick="openGifts()">Open Your Gifts 💌</button>
+<button onclick="go('welcome')">Start Again ↻</button>
+</section>
+</main>
 
 <script>
 const $=id=>document.getElementById(id);
-let currentScreen='welcome', musicOn=false, audioCtx=null, melodyTimer=null, musicStep=0, cakeStage=0;
-let cardOpened=[false,false,false,false], giftTapped=[false,false,false], ghostGone=[false,false], gamesUnlocked=0;
-let quizIndex=0,quizScore=0;
-const quiz=[
- {q:"What makes an ordinary day memorable?",a:["Little moments together 💗","A mountain of homework 📚","A broken pencil ✏️"],correct:0},
- {q:"What's the best kind of conversation?",a:["A real, random long conversation 💬","Only talking about the weather 🌦️","No talking at all 🤐"],correct:0},
- {q:"What should a birthday have?",a:["Cake, laughter and surprises 🎂","Only homework 😭","An empty gift box 📦"],correct:0},
- {q:"What matters most in a friendship?",a:["Kindness and good memories 💙","Winning every argument 🥊","Never laughing 😂"],correct:0},
- {q:"What is the goal of this little website?",a:["Make Laxmi smile 🥹","Make her do maths 😈","Hide all the buttons"],correct:0}
-];
-const cardData=[
- ["🌷","Our Best Memories","Those little moments and conversations can become our favourite memories. The ordinary days are sometimes the ones we remember most."],
- ["💗","Things I Appreciate","I appreciate your kindness, the conversations we share, and the way small moments can turn into good memories."],
- ["💌","A Little Wish","May your days be full of peace, laughter, lovely surprises, and people who genuinely care about you."],
- ["✨","A Letter for You","There is one more little message waiting at the end of this adventure. Keep going, birthday girl!"]
-];
 function go(id){
- stopGames();
- document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
- $(id).classList.add('active');currentScreen=id;window.scrollTo(0,0);
- if(id==='heartGame')startHeartGame();
- if(id==='bombGame')startBombGame();
- if(id==='finish')startConfetti();
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ $(id).classList.add('active');
+ if(id==='quiz' && !quizStarted) renderQuestion();
 }
-function startSurprise(){startMusic();speakName();go('wish')}
-function startMusic(){
- try{
-  if(!audioCtx)audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-  if(audioCtx.state==='suspended')audioCtx.resume();
-  musicOn=true;
-  if(melodyTimer)clearInterval(melodyTimer);
-  const notes=[523,523,587,523,698,659,523,523,587,523,784,698,523,523,1046,880,698,659,587,932,932,880,698,784,698];
-  musicStep=0;
-  melodyTimer=setInterval(()=>{
-   if(!musicOn||!audioCtx)return;
-   const n=notes[musicStep%notes.length];musicStep++;
-   const o=audioCtx.createOscillator(),g=audioCtx.createGain();
-   o.type='sine';o.frequency.value=n;g.gain.setValueAtTime(.0001,audioCtx.currentTime);
-   g.gain.exponentialRampToValueAtTime(.08,audioCtx.currentTime+.02);
-   g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.35);
-   o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.36);
-  },390);
- }catch(e){}
+function decorate(n=20){
+ const box=$('sparkles'),symbols=['🌸','✨','💖','🌷'];
+ for(let i=0;i<n;i++){
+  const e=document.createElement('span');
+  e.className='particle';
+  e.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  e.style.left=Math.random()*100+'%';
+  e.style.animationDelay=Math.random()*1.5+'s';
+  e.style.fontSize=(14+Math.random()*15)+'px';
+  box.appendChild(e);setTimeout(()=>e.remove(),5000);
+ }
 }
-function toggleMusic(){if(!musicOn){startMusic();speakName()}else{musicOn=false;if(melodyTimer)clearInterval(melodyTimer)}}
-function speakName(){
- try{if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance("Happy birthday dear Laxmi! Happy birthday to you!");u.rate=.85;u.pitch=1.2;u.volume=1;speechSynthesis.speak(u)}}catch(e){}
+let audioCtx=null,musicTimer=null,musicOn=false,note=0;
+function music(){
+ if(musicOn){
+  clearInterval(musicTimer);musicOn=false;
+  if(audioCtx)audioCtx.suspend();
+  return;
+ }
+ const AC=window.AudioContext||window.webkitAudioContext;
+ if(!AC){alert('Audio is not supported in this browser.');return}
+ audioCtx=audioCtx||new AC();audioCtx.resume();musicOn=true;
+ const melody=[523,659,784,659,587,698,880,698,523,659,784,1046,880,784,659,587];
+ clearInterval(musicTimer);
+ musicTimer=setInterval(()=>{
+  if(!musicOn)return;
+  const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();
+  osc.type='sine';osc.frequency.value=melody[note++%melody.length];
+  gain.gain.setValueAtTime(.0001,audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(.09,audioCtx.currentTime+.04);
+  gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.3);
+  osc.connect(gain);gain.connect(audioCtx.destination);
+  osc.start();osc.stop(audioCtx.currentTime+.32);
+ },360);
 }
-function cakeTap(){
- if(cakeStage===0){cakeStage=1;$('cakeEmoji').textContent='🎂';$('cakeText').textContent='Whoooosh! Candles blown out! ✨';$('cakeBtn').textContent='Now Cut the Cake 🔪';flowers(35);return}
- if(cakeStage===1){cakeStage=2;$('cakeEmoji').textContent='🍰';$('cakeText').textContent='Yay! Cake cut! Save me a slice! 💗';$('cakeBtn').textContent='Continue to Surprise 💌';flowers(55);return}
- go('choice');
+let blown=false;
+function blow(){
+ if(blown)return;
+ blown=true;
+ $('cakeEmoji').textContent='🎂';
+ $('cakeMessage').textContent='Wish sent to the universe! ✨ Happy Birthday, Laxmi! 💖';
+ $('cutButton').hidden=false;decorate(45);
 }
-$('cakeEmoji').addEventListener('click',()=>{});
-function openEnvelope(){
- $('outerGift').style.display='none';$('outerGiftBtn').style.display='none';$('envelopeContents').style.display='block';flowers(22);
+function cutCake(){
+ $('cakeMessage').textContent='Cake cut! Sending you a shower of happiness! 🍰';
+ decorate(50);go('quiz');renderQuestion();
 }
-function revealCards(){
- if($('fourCards').style.display==='grid')return;
- $('fourCards').style.display='grid';
- $('fourCards').innerHTML=cardData.map((c,i)=>`<div class="card" id="card${i}"><span class="emoji">${c[0]}</span><b>${c[1]}</b><button onclick="openCard(${i})">Open Card 💌</button></div>`).join('');
- $('cardProgress').textContent='Open all four cards to continue.';
+const questions=[
+ {q:'What makes an ordinary day special?',a:['Little moments and good memories 💖','Expensive things','Nothing at all'],c:0},
+ {q:'What is a lovely birthday wish?',a:['More happiness and peaceful days 🌸','More stress','No smiles'],c:0},
+ {q:'What matters most in a friendship?',a:['Kindness and understanding 💌','Always being perfect','Never talking'],c:0},
+ {q:'What should we keep collecting?',a:['Happy little memories ✨','Worries','Arguments'],c:0}
+];
+let qi=0,score=0,quizStarted=false;
+function renderQuestion(){
+ quizStarted=true;
+ if(qi>=questions.length){
+  $('resultText').textContent='You got '+score+' out of '+questions.length+'! The sweetest part is the memories we make together. 💗';
+  go('finish');decorate(30);return;
+ }
+ const q=questions[qi];
+ $('quizCount').textContent='Question '+(qi+1)+' of '+questions.length;
+ $('question').textContent=q.q;$('answers').innerHTML='';
+ q.a.forEach((a,i)=>{
+  const b=document.createElement('button');b.textContent=a;b.style.display='block';b.style.width='100%';
+  b.onclick=()=>{if(i===q.c)score++;qi++;renderQuestion()};
+  $('answers').appendChild(b);
+ });
 }
-function openCard(i){
- cardOpened[i]=true;$('card'+i).classList.add('done');
- $('card'+i).querySelector('button').textContent='Opened ✓';
- showModal(cardData[i][1],cardData[i][2]);
- const n=cardOpened.filter(Boolean).length;
- $('cardProgress').textContent=`${n} of 4 cards opened 💗`;
- if(n===4)$('continueMsgs').style.display='inline-block';
+function openGifts(){
+ location.href='https://srinivasy3108-dev.github.io/laxmi-gifts-world/';
 }
-function showModal(title,text){$('modalTitle').textContent=title;$('modalText').textContent=text;$('modal').classList.add('show')}
-function closeModal(){$('modal').classList.remove('show')}
-function startQuiz(){quizIndex=0;quizScore=0;renderQuiz();go('quiz')}
-function renderQuiz(){
- const q=quiz[quizIndex];$('quizCount').textContent=`Question ${quizIndex+1} of ${quiz.length}`;$('quizProgress').style.width=(quizIndex/quiz.length*100)+'%';$('quizQuestion').textContent=q.q;
- $('quizAnswers').innerHTML=q.a.map((a,i)=>`<button class="secondary" onclick="answerQuiz(${i})">${a}</button>`).join('');
-}
-function answerQuiz(i){if(i===quiz[quizIndex].correct
-
-rect){
-  quizScore++;
-}
-quizIndex++;
-renderQuiz();
-}
-
-function showQuizResult(){
-  $('quizAnswers').innerHTML =
-    '<p>You scored '+quizScore+' out of '+quiz.length+' 💖</p>'+
-    '<button onclick="go(\'envelope\')">Open Your Gifts 💌</button>';
-}
-
-function burstGifts(){
-  go('mystery');
-  flowers(35);
-}
-
-function tapMiniGift(i){
-  if(i===0){
-    showModal('A tiny surprise 🎁','Sorry, I am not the first one. Go to another gift!');
-  }else if(i===1){
-    showModal('One more surprise 🎁','Sorry, I chose the wrong one. Try another gift!');
-  }else if(i===2){
-    go('letterEnd');
-  }else{
-    showModal('A little surprise 🎁','Keep exploring, Laxmi! 💕');
-  }
-}
-
-function backToGifts(){
-  stopGames();
-  go('mystery');
-}
-
-function stopGames(){
-  if(gameInterval) clearInterval(gameInterval);
-  gameInterval=null;
-}
-
-function startHeartGame(){
-  stopGames();
-  go('heartGame');
-  showModal('Catch the Falling Hearts 💗','Tap the falling hearts to collect them!');
-}
-
-function startBombGame(){
-  stopGames();
-  go('bombGame');
-  showModal('Dodge the Bombs 💣','Avoid the bombs and save the hearts!');
-}
-
-function endHeartGame(){
-  stopGames();
-  showModal(
-    'Game Over 💔',
-    'Every little heart matters! Want to try again?'
-  );
-}
-
-function endBombGame(){
-  stopGames();
-  showModal(
-    'Game Over 💔',
-    'Try once more to save the hearts!'
-  );
-}
-
-function movePlayer(){
-  const player=$('player');
-  if(player){
-    player.style.left='50%';
-  }
-}
-
-function flowers(count=20){
-  const symbols=['🌸','🌷','✨','💖','🌼'];
-  for(let i=0;i<count;i++){
-    const el=document.createElement('span');
-    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
-    el.style.cssText=
-      'position:fixed;left:'+Math.random()*100+'%;top:-30px;'+
-      'font-size:20px;pointer-events:none;z-index:9999;'+
-      'transition:transform 3s linear,top 3s linear;';
-    document.body.appendChild(el);
-    setTimeout(()=>{
-      el.style.top='105vh';
-      el.style.transform='rotate(360deg)';
-    },50);
-    setTimeout(()=>el.remove(),3200);
-  }
-}
-
-function startConfetti(){
-  flowers(45);
-}
-
-document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('[onclick]').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      // Keep existing button actions intact.
-    });
-  });
-});
+decorate(18);
 </script>
 </body>
 </html>
-
-                          
